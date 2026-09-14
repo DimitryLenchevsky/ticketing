@@ -2,8 +2,7 @@ import axios from "axios";
 import http from "http";
 
 const LandingPage = ({ currentUser }) => {
-  console.log("Current User: ", currentUser);
-  return <h1>Landing Page</h1>;
+  return currentUser ? <h1>You are signed in</h1> : <h1>You are NOT signed in</h1> 
 };
 
 LandingPage.getInitialProps = async ({ req }) => {
