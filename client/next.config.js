@@ -1,9 +1,6 @@
-/** @type {import('next').NextConfig} */
 module.exports = {
-  turbopack: {
-    watchOptions: {
-      pollIntervalMs: 300,
-    },
+  webpack: (config) => {
+    config.watchOptions.poll = 300;
+    return config;
   },
-  allowedDevOrigins: ['ticketing.dev'],
 };
